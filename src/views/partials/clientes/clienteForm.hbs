@@ -1,0 +1,49 @@
+<div class="card card-body p-4 rounded-0 bg-dark text-white">
+    <h4>Agregar Cliente</h4>
+    <form action="/clientes/agregar" method="post">
+    <div>
+        <label for="nombre">Escribe nombre:</label>
+        <input type="text" name="nombre" placeholder="Name" id="nombre"
+        class="form-control bg-dark text-white">
+    </div>
+
+    <div>
+        <label for="paterno">Escribe apellido paterno:</label>
+        <input type="text" name="paterno" placeholder="Last Name" id="paterno"
+        class="form-control bg-dark text-white">
+    </div>
+
+    <div>
+        <label for="materno">Escribe apellido materno:</label>
+        <input type="text" name="materno" placeholder="Mother's Last Name" id="materno"
+        class="form-control bg-dark text-white">
+    </div>
+
+    <div>
+        <label for="sexo">Selecciona sexo:</label>
+        <select name="sexo" id="sexo" class="form-control bg-dark text-white">
+            <option value="M">Masculino</option>
+            <option value="F">Femenino</option>
+        </select>
+    </div>
+
+    <div>
+        <label for="email">Escribe el email:</label>
+        <input type="email" name="email" placeholder="Email" id="email"
+        class="form-control bg-dark text-white">
+    </div>
+
+    <div>
+        <label for="telefono">Escribe el teléfono:</label>
+        <input type="text" name="telefono" placeholder="Phone" id="telefono"
+        class="form-control bg-dark text-white">
+    </div>
+
+    <div>
+        <label for="direccion">Escribe la dirección:</label>
+        <textarea name="direccion" cols="25" rows="5" placeholder="Address" class="form-control bg-dark text-white"></textarea>
+    </div>
+
+    <button class="btn btn-success btn-sm mt-2">Agregar</button>
+</form>
+</div>

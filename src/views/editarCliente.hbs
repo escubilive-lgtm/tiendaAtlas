@@ -1,0 +1,44 @@
+<div class="conteiner">
+    <div class="row">
+        <div class="col-md-5 offset-md-3">
+            <div class="card card-body bg-dark p-4 text-white">
+                <h4>Actualiza Cliente</h4>
+                <form action="/clientes/{{clientes._id}}/update" method="POST">
+                    <div>
+                        <label for="nombre">Modifica Nombre</label>
+                        <input type="text" name="nombre" placeholder="Name" value="{{clientes.nombre}}" class="form-control bg-dark text-white">
+                    </div>
+                    <div>
+                        <label for="apellidos">Modifica Apellido Paterno</label>
+                        <input type="text" name="paterno" placeholder="Last Name" value="{{clientes.paterno}}" class="form-control bg-dark text-white">
+                    </div>
+                    <div>
+                        <label for="apellidos">Modifica Apellido Materno</label>
+                        <input type="text" name="materno" placeholder="Last Name" value="{{clientes.materno}}" class="form-control bg-dark text-white">
+                    </div>
+                    <div>
+                        <label for="sexo">Modifica Sexo</label>
+                        <select name="sexo" class="form-control bg-dark text-white">
+                            <option value="Masculino" {{#ifEq clientes.sexo "Masculino"}}selected{{/ifEq}}>Masculino</option>
+                            <option value="Femenino" {{#ifEq clientes.sexo "Femenino"}}selected{{/ifEq}}>Femenino</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="email">Modifica Email</label>
+                        <input type="email" name="email" placeholder="Email" value="{{clientes.email}}" class="form-control bg-dark text-white">
+                    </div>
+                    <div>
+                        <label for="telefono">Modifica Telefono</label>
+                        <input type="text" name="telefono" placeholder="Phone" value="{{clientes.telefono}}" class="form-control bg-dark text-white">
+                    </div>
+                    <div>
+                        <label for="direccion">Modifica Direccion</label>
+                        <textarea name="direccion" cols="25" rows="5" placeholder="Address" class="form-control bg-dark text-white">{{clientes.direccion}}</textarea>
+                    </div>
+                    <button class="btn btn-info">Actualizar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</div>
